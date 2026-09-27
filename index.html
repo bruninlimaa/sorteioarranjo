@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sorteio Especial Glamouroso Arranjo</title>
+
+
+<link rel="stylesheet" href="style.css">
+
+
+<link 
+rel="stylesheet" 
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+</head>
+
+
+<body>
+
+
+
+<!-- BOTÃO MODO NOTURNO -->
+
+<button id="themeButton" class="theme-button">
+🌙
+</button>
+
+
+
+
+
+
+<!-- CONTAGEM REGRESSIVA -->
+
+<div id="countdownOverlay" class="overlay hidden">
+
+
+<div id="countNumber">
+
+3
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- TELA DO VENCEDOR -->
+
+<div id="winnerOverlay" class="overlay hidden">
+
+
+<div class="winner-box">
+
+
+<div class="sparkles">
+
+✨ 🌸 ✨
+
+</div>
+
+
+
+
+<div class="trophy">
+
+🏆
+
+</div>
+
+
+
+
+<h1>
+
+PARABÉNS!
+
+</h1>
+
+
+
+
+<p>
+
+Você ganhou um Glamouroso Arranjo!
+
+</p>
+
+
+
+
+
+
+<div class="winner-number">
+
+
+Número sorteado:
+
+
+<strong id="winnerNumber">
+
+000
+
+</strong>
+
+
+
+</div>
+
+
+
+
+
+
+<div id="winnerName" class="winner-name">
+
+Nome do ganhador
+
+</div>
+
+
+
+
+
+
+<button id="closeWinner">
+
+Fechar
+
+</button>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<main class="container">
+
+
+
+
+
+<header>
+
+
+<h1>
+
+🌸 Sorteio Especial Glamouroso Arranjo
+
+</h1>
+
+
+
+<p>
+
+Participe e concorra a um lindo Arranjo
+
+</p>
+
+
+
+</header>
+
+
+
+
+
+
+
+
+
+<section class="stats">
+
+
+
+<div class="card">
+
+
+<i class="fa-solid fa-users"></i>
+
+
+<span>
+
+Participantes
+
+</span>
+
+
+
+<strong id="totalParticipants">
+
+0
+
+</strong>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="card">
+
+
+<i class="fa-solid fa-gift"></i>
+
+
+<span>
+
+Números cadastrados
+
+</span>
+
+
+
+<strong id="totalNumbers">
+
+0
+
+</strong>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="card">
+
+
+<i class="fa-solid fa-trophy"></i>
+
+
+<span>
+
+Último vencedor
+
+</span>
+
+
+
+<strong id="lastWinner">
+
+-
+
+</strong>
+
+
+</div>
+
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<section class="form-area">
+
+
+<h2>
+
+🌷 Adicionar participante
+
+</h2>
+
+
+
+
+
+<div class="inputs">
+
+
+
+<input 
+type="text"
+id="nameInput"
+placeholder="Nome do participante">
+
+
+
+
+
+
+<input 
+type="number"
+id="numberInput"
+placeholder="Número da rifa">
+
+
+
+
+
+
+<button id="addButton">
+
+
+<i class="fa-solid fa-plus"></i>
+
+
+Adicionar
+
+
+</button>
+
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<section class="list-area">
+
+
+
+<div class="list-header">
+
+
+
+<h2>
+
+🌺 Participantes
+
+</h2>
+
+
+
+
+<input 
+type="text"
+id="searchInput"
+placeholder="Pesquisar nome ou número">
+
+
+
+</div>
+
+
+
+
+
+
+<div id="participantsList">
+
+
+</div>
+
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<section class="actions">
+
+
+
+<button id="drawButton" class="draw">
+
+
+<i class="fa-solid fa-gift"></i>
+
+
+INICIAR SORTEIO
+
+
+</button>
+
+
+
+
+
+
+
+<button id="clearButton" class="clear">
+
+
+<i class="fa-solid fa-trash"></i>
+
+
+Limpar lista
+
+
+</button>
+
+
+
+
+</section>
+
+
+
+
+
+
+
+</main>
+
+
+
+
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+
+</html>

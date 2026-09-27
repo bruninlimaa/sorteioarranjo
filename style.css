@@ -1,0 +1,1166 @@
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI", Arial, sans-serif;
+
+}
+
+
+
+body{
+
+    min-height:100vh;
+
+    background:
+    linear-gradient(
+        135deg,
+        #fff8f2,
+        #fbe5ed
+    );
+
+    color:#4b3040;
+
+    display:flex;
+
+    justify-content:center;
+
+    padding:30px;
+
+    transition:.4s;
+
+}
+
+
+
+
+
+
+.container{
+
+    width:100%;
+
+    max-width:950px;
+
+}
+
+
+
+
+
+
+
+/* ==========================
+BOTÃO MODO NOTURNO
+========================== */
+
+
+.theme-button{
+
+
+    position:fixed;
+
+
+    top:20px;
+
+
+    right:25px;
+
+
+    width:50px;
+
+
+    height:50px;
+
+
+    border-radius:50%;
+
+
+    background:#2f5d50;
+
+
+    color:white;
+
+
+    font-size:22px;
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+    border:none;
+
+
+    cursor:pointer;
+
+
+    z-index:1000;
+
+
+    box-shadow:
+
+    0 5px 15px rgba(0,0,0,.20);
+
+
+}
+
+
+
+
+
+.theme-button:hover{
+
+
+    transform:scale(1.1);
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==========================
+CABECALHO
+========================== */
+
+
+header{
+
+    text-align:center;
+
+    margin-bottom:35px;
+
+}
+
+
+
+header h1{
+
+    font-size:38px;
+
+    color:#a4516d;
+
+    margin-bottom:10px;
+
+}
+
+
+
+header p{
+
+    color:#765565;
+
+    font-size:17px;
+
+}
+
+
+
+
+
+
+
+
+
+/* ==========================
+CARDS
+========================== */
+
+
+.stats{
+
+
+    display:grid;
+
+
+    grid-template-columns:repeat(3,1fr);
+
+
+    gap:20px;
+
+
+    margin-bottom:25px;
+
+
+}
+
+
+
+
+
+.card{
+
+
+    background:white;
+
+
+    padding:25px;
+
+
+    border-radius:25px;
+
+
+    text-align:center;
+
+
+    box-shadow:
+
+    0 15px 40px rgba(180,90,120,.15);
+
+
+    transition:.3s;
+
+
+}
+
+
+
+.card:hover{
+
+
+    transform:translateY(-5px);
+
+
+}
+
+
+
+
+
+.card i{
+
+
+    font-size:30px;
+
+
+    color:#c9a227;
+
+
+    margin-bottom:12px;
+
+
+}
+
+
+
+.card span{
+
+
+    display:block;
+
+
+    color:#876273;
+
+
+}
+
+
+
+.card strong{
+
+
+    display:block;
+
+
+    margin-top:10px;
+
+
+    font-size:24px;
+
+
+    color:#a4516d;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==========================
+FORMULARIOS
+========================== */
+
+
+.form-area,
+.list-area{
+
+
+    background:white;
+
+
+    padding:30px;
+
+
+    border-radius:30px;
+
+
+    margin-bottom:25px;
+
+
+    box-shadow:
+
+    0 15px 45px rgba(180,90,120,.12);
+
+
+}
+
+
+
+
+h2{
+
+
+    color:#a4516d;
+
+
+    margin-bottom:20px;
+
+
+}
+
+
+
+
+
+.inputs{
+
+
+    display:flex;
+
+
+    gap:15px;
+
+
+}
+
+
+
+input{
+
+
+    flex:1;
+
+
+    padding:16px;
+
+
+    border-radius:15px;
+
+
+    border:1px solid #efd2dc;
+
+
+    outline:none;
+
+
+    font-size:15px;
+
+
+}
+
+
+
+
+input:focus{
+
+
+    border-color:#d96c8a;
+
+
+}
+
+
+
+
+
+
+
+button{
+
+
+    border:none;
+
+
+    cursor:pointer;
+
+
+    border-radius:15px;
+
+
+    padding:15px 25px;
+
+
+    font-weight:bold;
+
+
+    transition:.3s;
+
+
+}
+
+
+
+
+
+button:hover{
+
+
+    transform:scale(1.04);
+
+
+}
+
+
+
+
+
+#addButton{
+
+
+    background:#2f5d50;
+
+
+    color:white;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==========================
+LISTA
+========================== */
+
+
+.list-header{
+
+
+    display:flex;
+
+
+    justify-content:space-between;
+
+
+    align-items:center;
+
+
+    gap:20px;
+
+
+}
+
+
+
+
+.list-header input{
+
+
+    max-width:300px;
+
+
+}
+
+
+
+
+#participantsList{
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+    gap:12px;
+
+
+}
+
+
+
+
+
+.participant{
+
+
+    background:#fff5f8;
+
+
+    border-left:5px solid #d96c8a;
+
+
+    padding:16px;
+
+
+    border-radius:15px;
+
+
+    display:flex;
+
+
+    justify-content:space-between;
+
+
+    align-items:center;
+
+
+}
+
+
+
+
+.delete{
+
+
+    background:#d96c8a;
+
+
+    color:white;
+
+
+    padding:10px 14px;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==========================
+BOTOES
+========================== */
+
+
+.actions{
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    gap:20px;
+
+
+}
+
+
+
+
+
+.draw{
+
+
+    background:
+
+    linear-gradient(
+        45deg,
+        #d96c8a,
+        #c9a227
+    );
+
+
+    color:white;
+
+
+    font-size:18px;
+
+
+}
+
+
+
+
+
+
+.clear{
+
+
+    background:#b94b5d;
+
+
+    color:white;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==========================
+CONTAGEM
+========================== */
+
+
+.overlay{
+
+
+    position:fixed;
+
+
+    inset:0;
+
+
+    background:rgba(0,0,0,.95);
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+    z-index:999;
+
+
+}
+
+
+
+
+.hidden{
+
+
+    display:none;
+
+
+}
+
+
+
+
+
+#countNumber{
+
+
+    font-size:180px;
+
+
+    color:white;
+
+
+    font-weight:900;
+
+
+    animation:pulse .7s infinite;
+
+
+}
+
+
+
+
+@keyframes pulse{
+
+
+0%{
+
+transform:scale(.8);
+
+opacity:.5;
+
+}
+
+
+50%{
+
+transform:scale(1.2);
+
+opacity:1;
+
+}
+
+
+100%{
+
+transform:scale(.8);
+
+opacity:.5;
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==========================
+VENCEDOR
+========================== */
+
+
+winner-box{
+
+
+    background:white;
+
+
+}
+
+
+
+
+
+.winner-box{
+
+
+    background:white;
+
+
+    width:90%;
+
+
+    max-width:450px;
+
+
+    padding:40px;
+
+
+    border-radius:35px;
+
+
+    text-align:center;
+
+
+    box-shadow:
+
+    0 0 50px rgba(201,162,39,.5);
+
+
+    animation:show .5s;
+
+
+}
+
+
+
+
+
+
+@keyframes show{
+
+
+from{
+
+
+transform:scale(.5);
+
+
+opacity:0;
+
+
+}
+
+
+to{
+
+
+transform:scale(1);
+
+
+opacity:1;
+
+
+}
+
+
+}
+
+
+
+
+
+.sparkles{
+
+
+    font-size:30px;
+
+
+}
+
+
+
+.trophy{
+
+
+    font-size:80px;
+
+
+}
+
+
+
+
+
+.winner-box h1{
+
+
+    color:#c9a227;
+
+
+}
+
+
+
+
+
+#winnerNumber{
+
+
+    display:block;
+
+
+    font-size:45px;
+
+
+    color:#2f5d50;
+
+
+}
+
+
+
+
+
+.winner-name{
+
+
+    font-size:30px;
+
+
+    color:#a4516d;
+
+
+    margin:20px;
+
+
+}
+
+
+
+
+
+#closeWinner{
+
+
+    background:#d96c8a;
+
+
+    color:white;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==========================
+MODO NOTURNO
+========================== */
+
+
+body.dark{
+
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #18151a,
+        #30202b
+    );
+
+
+    color:white;
+
+
+}
+
+
+
+
+
+body.dark header h1{
+
+
+    color:#f3c969;
+
+
+}
+
+
+
+
+
+body.dark header p{
+
+
+    color:#ddd;
+
+
+}
+
+
+
+
+
+body.dark .card,
+
+body.dark .form-area,
+
+body.dark .list-area,
+
+body.dark .winner-box{
+
+
+    background:#242029;
+
+
+    color:white;
+
+
+}
+
+
+
+
+
+
+body.dark h2{
+
+
+    color:#f3c969;
+
+
+}
+
+
+
+
+
+body.dark .card span{
+
+
+    color:#ddd;
+
+
+}
+
+
+
+
+
+body.dark .card strong{
+
+
+    color:#f3c969;
+
+
+}
+
+
+
+
+
+
+body.dark input{
+
+
+    background:#35313a;
+
+
+    color:white;
+
+
+}
+
+
+
+
+
+
+body.dark .participant{
+
+
+    background:#312b34;
+
+
+    color:white;
+
+
+}
+
+
+
+
+
+
+
+
+/* ==========================
+CELULAR
+========================== */
+
+
+@media(max-width:700px){
+
+
+body{
+
+    padding:15px;
+
+}
+
+
+
+.theme-button{
+
+
+    top:15px;
+
+
+    right:15px;
+
+
+}
+
+
+
+
+.stats{
+
+
+    grid-template-columns:1fr;
+
+
+}
+
+
+
+
+
+.inputs{
+
+
+    flex-direction:column;
+
+
+}
+
+
+
+
+.list-header{
+
+
+    flex-direction:column;
+
+
+}
+
+
+
+
+
+.list-header input{
+
+
+    width:100%;
+
+
+    max-width:none;
+
+
+}
+
+
+
+
+
+.actions{
+
+
+    flex-direction:column;
+
+
+}
+
+
+
+
+
+header h1{
+
+
+    font-size:28px;
+
+
+}
+
+
+
+}
+
+/* Animação suave do resultado */
+
+#winnerNumber,
+#winnerName{
+
+
+    transition:
+
+    transform .25s ease,
+
+    opacity .25s ease;
+
+
+}
